@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 100% 95%;
+    --foreground: 27 45% 21%;
+
+    --card: 32 89% 67%;
+    --card-foreground: 27 45% 21%;
+
+    --popover: 36 100% 95%;
+    --popover-foreground: 27 45% 21%;
+
+    --primary: 27 100% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 33 59% 77%;
+    --secondary-foreground: 27 45% 21%;
+
+    --muted: 33 59% 77%;
+    --muted-foreground: 27 45% 40%;
+
+    --accent: 33 59% 77%;
+    --accent-foreground: 27 45% 21%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 33 59% 77%;
+    --input: 33 59% 77%;
+    --ring: 27 100% 53%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.water-drop {
+  animation: drop 1s ease-in-out forwards;
+  transform-origin: center top;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-100px) scale(0.8);
+    opacity: 0.7;
+  }
+  70% {
+    transform: translateY(0) scale(1.1);
+    opacity: 1;
+  }
+  85% {
+    transform: translateY(-15px) scale(0.9);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+}
+
+.spring-nav-indicator {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+.delay-200 {
+  animation-delay: 200ms;
+}
+.delay-300 {
+  animation-delay: 300ms;
+}
+.delay-400 {
+  animation-delay: 400ms;
+}
+
